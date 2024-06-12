@@ -1,6 +1,9 @@
 # Use an official Ubuntu as a parent image
 FROM ubuntu:latest
 
+# Set environment variables to avoid interactive prompts during package installation
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Install necessary packages
 RUN apt-get update && apt-get install -y \
     wget \
