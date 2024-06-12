@@ -1,0 +1,10 @@
+version: '3'
+services:
+  chrome:
+    build: .
+    ports:
+      - "5900:5900"
+    environment:
+      - DISPLAY=:99
+    volumes:
+      - /dev/shm:/dev/shm
